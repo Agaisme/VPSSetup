@@ -24,7 +24,7 @@ fi
 # Source the other script files
 . packages.sh
 . python_setup.sh
-. firewall.sh
+. firewall_iptables.sh
 . security_updates.sh
 . fail2ban.sh
 
@@ -32,7 +32,7 @@ fi
 update_and_upgrade
 install_packages
 setup_python_uv
-configure_firewall
+configure_firewall_iptables
 enable_security_updates
 configure_fail2ban
 
