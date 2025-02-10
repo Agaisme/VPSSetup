@@ -24,5 +24,6 @@ install_packages() {
         net-tools \
         unzip \
         sudo \
-        software-properties-common
+        software-properties-common \
+        iptables-persistent
 }
