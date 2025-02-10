@@ -2,6 +2,7 @@
 
 configure_firewall_iptables() {
     print_status "Configuring iptables firewall..."
+    print_status "This Script will accept Traffic from Cloudflare and other sources..."
 
     # Flush existing rules
     iptables -F
@@ -51,6 +52,7 @@ configure_firewall_iptables() {
 
     # Save iptables rules
     iptables-save > /etc/iptables/rules.v4
+    ip6tables-save > /etc/iptables/rules.v6
 
     print_status "iptables firewall configuration complete."
 }
